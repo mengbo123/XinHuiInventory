@@ -1,0 +1,208 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\AAE_Disk\\XinghuiChizhuangMy\\XingHui\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C79E880F-0368-9F1B-6C61-A66F04CE60B4}|XingHui.csproj|d:\\aae_disk\\xinghuichizhuangmy\\xinghui\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C79E880F-0368-9F1B-6C61-A66F04CE60B4}|XingHui.csproj|solutionrelative:dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C79E880F-0368-9F1B-6C61-A66F04CE60B4}|XingHui.csproj|d:\\aae_disk\\xinghuichizhuangmy\\xinghui\\settingswindows.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C79E880F-0368-9F1B-6C61-A66F04CE60B4}|XingHui.csproj|solutionrelative:settingswindows.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C79E880F-0368-9F1B-6C61-A66F04CE60B4}|XingHui.csproj|d:\\aae_disk\\xinghuichizhuangmy\\xinghui\\reportwindows.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C79E880F-0368-9F1B-6C61-A66F04CE60B4}|XingHui.csproj|solutionrelative:reportwindows.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C79E880F-0368-9F1B-6C61-A66F04CE60B4}|XingHui.csproj|d:\\aae_disk\\xinghuichizhuangmy\\xinghui\\dashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C79E880F-0368-9F1B-6C61-A66F04CE60B4}|XingHui.csproj|solutionrelative:dashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C79E880F-0368-9F1B-6C61-A66F04CE60B4}|XingHui.csproj|d:\\aae_disk\\xinghuichizhuangmy\\xinghui\\dashboard.navigation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C79E880F-0368-9F1B-6C61-A66F04CE60B4}|XingHui.csproj|solutionrelative:dashboard.navigation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C79E880F-0368-9F1B-6C61-A66F04CE60B4}|XingHui.csproj|d:\\aae_disk\\xinghuichizhuangmy\\xinghui\\reporting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C79E880F-0368-9F1B-6C61-A66F04CE60B4}|XingHui.csproj|solutionrelative:reporting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C79E880F-0368-9F1B-6C61-A66F04CE60B4}|XingHui.csproj|d:\\aae_disk\\xinghuichizhuangmy\\xinghui\\dialogs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C79E880F-0368-9F1B-6C61-A66F04CE60B4}|XingHui.csproj|solutionrelative:dialogs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C79E880F-0368-9F1B-6C61-A66F04CE60B4}|XingHui.csproj|d:\\aae_disk\\xinghuichizhuangmy\\xinghui\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C79E880F-0368-9F1B-6C61-A66F04CE60B4}|XingHui.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C79E880F-0368-9F1B-6C61-A66F04CE60B4}|XingHui.csproj|d:\\aae_disk\\xinghuichizhuangmy\\xinghui\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C79E880F-0368-9F1B-6C61-A66F04CE60B4}|XingHui.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C79E880F-0368-9F1B-6C61-A66F04CE60B4}|XingHui.csproj|d:\\aae_disk\\xinghuichizhuangmy\\xinghui\\inventorystore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C79E880F-0368-9F1B-6C61-A66F04CE60B4}|XingHui.csproj|solutionrelative:inventorystore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C79E880F-0368-9F1B-6C61-A66F04CE60B4}|XingHui.csproj|d:\\aae_disk\\xinghuichizhuangmy\\xinghui\\excelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C79E880F-0368-9F1B-6C61-A66F04CE60B4}|XingHui.csproj|solutionrelative:excelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ReportWindows.cs",
+              "DocumentMoniker": "D:\\AAE_Disk\\XinghuiChizhuangMy\\XingHui\\ReportWindows.cs",
+              "RelativeDocumentMoniker": "ReportWindows.cs",
+              "ToolTip": "D:\\AAE_Disk\\XinghuiChizhuangMy\\XingHui\\ReportWindows.cs",
+              "RelativeToolTip": "ReportWindows.cs",
+              "ViewState": "AgIAABkBAAAAAAAAAAAYwCIBAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T07:34:52.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Reporting.cs",
+              "DocumentMoniker": "D:\\AAE_Disk\\XinghuiChizhuangMy\\XingHui\\Reporting.cs",
+              "RelativeDocumentMoniker": "Reporting.cs",
+              "ToolTip": "D:\\AAE_Disk\\XinghuiChizhuangMy\\XingHui\\Reporting.cs",
+              "RelativeToolTip": "Reporting.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAwDgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T05:13:42.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Dashboard.Navigation.cs",
+              "DocumentMoniker": "D:\\AAE_Disk\\XinghuiChizhuangMy\\XingHui\\Dashboard.Navigation.cs",
+              "RelativeDocumentMoniker": "Dashboard.Navigation.cs",
+              "ToolTip": "D:\\AAE_Disk\\XinghuiChizhuangMy\\XingHui\\Dashboard.Navigation.cs",
+              "RelativeToolTip": "Dashboard.Navigation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T04:52:27.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Dashboard.xaml",
+              "DocumentMoniker": "D:\\AAE_Disk\\XinghuiChizhuangMy\\XingHui\\Dashboard.xaml",
+              "RelativeDocumentMoniker": "Dashboard.xaml",
+              "ToolTip": "D:\\AAE_Disk\\XinghuiChizhuangMy\\XingHui\\Dashboard.xaml",
+              "RelativeToolTip": "Dashboard.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-10-16T15:26:33.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dashboard.xaml.cs",
+              "DocumentMoniker": "D:\\AAE_Disk\\XinghuiChizhuangMy\\XingHui\\Dashboard.xaml.cs",
+              "RelativeDocumentMoniker": "Dashboard.xaml.cs",
+              "ToolTip": "D:\\AAE_Disk\\XinghuiChizhuangMy\\XingHui\\Dashboard.xaml.cs",
+              "RelativeToolTip": "Dashboard.xaml.cs",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAAwJ8AAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T14:01:02.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SettingsWindows.cs",
+              "DocumentMoniker": "D:\\AAE_Disk\\XinghuiChizhuangMy\\XingHui\\SettingsWindows.cs",
+              "RelativeDocumentMoniker": "SettingsWindows.cs",
+              "ToolTip": "D:\\AAE_Disk\\XinghuiChizhuangMy\\XingHui\\SettingsWindows.cs",
+              "RelativeToolTip": "SettingsWindows.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAswGAAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T15:22:36.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Dialogs.cs",
+              "DocumentMoniker": "D:\\AAE_Disk\\XinghuiChizhuangMy\\XingHui\\Dialogs.cs",
+              "RelativeDocumentMoniker": "Dialogs.cs",
+              "ToolTip": "D:\\AAE_Disk\\XinghuiChizhuangMy\\XingHui\\Dialogs.cs",
+              "RelativeToolTip": "Dialogs.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAkwFkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T14:05:26.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\AAE_Disk\\XinghuiChizhuangMy\\XingHui\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "D:\\AAE_Disk\\XinghuiChizhuangMy\\XingHui\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAcwAwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T14:10:33.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "InventoryStore.cs",
+              "DocumentMoniker": "D:\\AAE_Disk\\XinghuiChizhuangMy\\XingHui\\InventoryStore.cs",
+              "RelativeDocumentMoniker": "InventoryStore.cs",
+              "ToolTip": "D:\\AAE_Disk\\XinghuiChizhuangMy\\XingHui\\InventoryStore.cs",
+              "RelativeToolTip": "InventoryStore.cs",
+              "ViewState": "AgIAALMAAAAAAAAAAAAIwL4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T14:30:30.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\AAE_Disk\\XinghuiChizhuangMy\\XingHui\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "D:\\AAE_Disk\\XinghuiChizhuangMy\\XingHui\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-10-16T13:53:03.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ExcelService.cs",
+              "DocumentMoniker": "D:\\AAE_Disk\\XinghuiChizhuangMy\\XingHui\\ExcelService.cs",
+              "RelativeDocumentMoniker": "ExcelService.cs",
+              "ToolTip": "D:\\AAE_Disk\\XinghuiChizhuangMy\\XingHui\\ExcelService.cs",
+              "RelativeToolTip": "ExcelService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAwAkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T16:40:03.891Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="XingHui.csproj" />
+  <Project Path="../XingHui.Tests/XingHui.Tests.csproj" />
+</Solution>

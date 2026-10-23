@@ -1,0 +1,160 @@
+﻿<Window x:Class="XingHui.Dashboard" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:XingHui" Title="兴辉 · 库存管理" Width="1380" Height="850" MinWidth="1180" MinHeight="650" WindowStartupLocation="CenterScreen">
+    <Window.Resources><local:ProductImageConverter x:Key="ProductImage"/>
+        <Style x:Key="SortHeader" TargetType="DataGridColumnHeader" BasedOn="{StaticResource {x:Type DataGridColumnHeader}}">
+            <Setter Property="ContentTemplate"><Setter.Value><DataTemplate>
+                <StackPanel Orientation="Horizontal"><TextBlock Text="{Binding}" VerticalAlignment="Center"/>
+                    <TextBlock Margin="5,0,0,0" VerticalAlignment="Center"><TextBlock.Style><Style TargetType="TextBlock">
+                        <Setter Property="Text" Value="↕"/><Setter Property="Foreground" Value="#176B60"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding SortDirection, RelativeSource={RelativeSource AncestorType=DataGridColumnHeader}}" Value="Ascending"><Setter Property="Text" Value="▲"/></DataTrigger>
+                            <DataTrigger Binding="{Binding SortDirection, RelativeSource={RelativeSource AncestorType=DataGridColumnHeader}}" Value="Descending"><Setter Property="Text" Value="▼"/></DataTrigger>
+                            <DataTrigger Binding="{Binding Column.CanUserSort, RelativeSource={RelativeSource AncestorType=DataGridColumnHeader}}" Value="False"><Setter Property="Visibility" Value="Collapsed"/></DataTrigger>
+                        </Style.Triggers>
+                    </Style></TextBlock.Style></TextBlock>
+                </StackPanel>
+            </DataTemplate></Setter.Value></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Background="#F4F6FA">
+        <Grid.ColumnDefinitions><ColumnDefinition Width="190"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+        <Border Background="#142D30" Padding="20,30">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"><DockPanel MinHeight="680">
+                <StackPanel DockPanel.Dock="Top">
+                    <TextBlock Text="兴辉瓷砖" Foreground="White" FontSize="30" FontWeight="Bold"/>
+                    <TextBlock Text="INVENTORY STUDIO" Foreground="#91B3AF" FontSize="10" Margin="0,8,0,40"/>
+                    <TextBlock Text="仓库工作台" Foreground="#91B3AF" Margin="0,0,0,14"/>
+                    <Button Content="▦ 全部库存" Click="All_Click" Margin="0,0,0,10"/>
+                    <Button Content="! 预警库存" Click="Low_Click" Background="#294447" Margin="0,0,0,10"/>
+                    <Button Content="  畅销分析" Click="Sales_Click" Background="#294447" Margin="0,0,0,10"/>
+                    <Button Content="  收支明细" Click="Finance_Click" Background="#294447" Margin="0,0,0,10"/>
+                    <Button Content="↔ 操作记录" Click="History_Click" Background="#294447" Margin="0,0,0,10"/>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Bottom">
+                    <Border Background="#234347" CornerRadius="10" Padding="12" Margin="0,0,0,16">
+                        <StackPanel>
+                            <Border Background="#D8EDE4" CornerRadius="18" Width="36" Height="36" HorizontalAlignment="Left" Margin="0,0,0,10">
+                                <TextBlock x:Name="UserInitial" Foreground="#176B60" FontSize="19" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <TextBlock Text="当前账户" Foreground="#98BBB6" FontSize="11"/>
+                            <TextBlock x:Name="UserText" Foreground="White" FontSize="16" FontWeight="SemiBold" TextTrimming="CharacterEllipsis" Margin="0,5,0,8"/>
+                            <TextBlock Text="● 本机管理账户" Foreground="#9CD8B8" FontSize="10"/>
+                        </StackPanel>
+                    </Border>
+                    <Button Content="软件设置" Click="Settings_Click" Background="#294447" Margin="0,0,0,10"/>
+                    <Button Content="修改密码" Click="Password_Click" Background="#294447" Margin="0,0,0,10"/>
+                        <Button Content="打开数据目录" Click="Folder_Click" Background="#294447" Margin="0,0,0,14"/>
+                    </StackPanel>
+            </DockPanel>
+            </ScrollViewer>
+        </Border>
+        <Grid Grid.Column="1" Margin="24,26,24,18">
+            <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+            <DockPanel Margin="0,0,0,24">
+                <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" VerticalAlignment="Center">
+                    <Button x:Name="BackButton" Content="← 返回" Click="Back_Click" ToolTip="返回上一次筛选、排序或分页的位置，不撤销业务数据"/>
+                    <Button Content="导入 Excel" Click="Import_Click" />
+                    <Button Content="导出 Excel" Click="Export_Click"/>
+                </StackPanel>
+                <StackPanel><TextBlock Text="库存总览" FontSize="28" Foreground="#193538" FontWeight="Bold"/>
+                    <TextBlock Text="每一件商品，都有清晰的去向。" Foreground="#75838C" Margin="0,7,0,0"/>
+                </StackPanel>
+            </DockPanel>
+            <UniformGrid Grid.Row="1" Columns="4" Margin="0,0,0,20">
+                <Border Background="White" CornerRadius="10" Padding="18,16" Margin="0,0,12,0">
+                    <StackPanel><TextBlock Text="商品款式 / SKU" Foreground="#75838C"/>
+                        <TextBlock x:Name="SkuText" FontSize="28" FontWeight="Bold" Foreground="#193538" Margin="0,6,0,0"/>
+                    </StackPanel>
+                </Border>
+                <Border Background="White" CornerRadius="10" Padding="18,16" Margin="0,0,12,0">
+                    <StackPanel><TextBlock Text="库存总量（件）" Foreground="#75838C"/>
+                        <TextBlock x:Name="QuantityText" FontSize="28" FontWeight="Bold" Foreground="#193538" Margin="0,6,0,0"/>
+                    </StackPanel>
+                </Border>
+                <Border Background="#FFF0E5" CornerRadius="10" Padding="18,16" Margin="0,0,12,0">
+                    <StackPanel><TextBlock Text="需要补货（款）" Foreground="#A2602E"/>
+                        <TextBlock x:Name="LowText" FontSize="28" FontWeight="Bold" Foreground="#B86025" Margin="0,6,0,0"/>
+                    </StackPanel>
+                </Border>
+                <Border Background="#E5F1ED" CornerRadius="10" Padding="18,16">
+                    <StackPanel><TextBlock Text="库存总片数" Foreground="#43796F"/>
+                        <TextBlock x:Name="ValueText" FontSize="28" FontWeight="Bold" Foreground="#176B60" Margin="0,6,0,0"/>
+                    </StackPanel>
+                </Border>
+            </UniformGrid>
+            <Border Grid.Row="2" Background="#FFF4E8" CornerRadius="6" Padding="14,10" Margin="0,0,0,16"><TextBlock x:Name="AlertText" Foreground="#945C2A" TextWrapping="Wrap"/></Border>
+            <StackPanel Grid.Row="3" Margin="0,0,0,14"><DockPanel>
+                <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+                    <Button Content="＋ 新增商品" Click="Add_Click"/>
+                    <Button Content="编辑" Click="Edit_Click"/>
+                    <Button Content="批量删除" Click="Delete_Click" Background="#F2E5E5" Foreground="#A34141" Margin="0"/></StackPanel>
+                <WrapPanel>
+                    <Grid Width="190">
+                        <TextBox x:Name="Search" ToolTip="搜索名称、编号、色号、规格、供应商" TextChanged="Search_Changed"/>
+                        <TextBlock Text="搜索名称 / 编号 / 色号" Margin="10,0" VerticalAlignment="Center" Foreground="#89959E" IsHitTestVisible="False"><TextBlock.Style><Style TargetType="TextBlock">
+                            <Setter Property="Visibility" Value="Collapsed"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Text, ElementName=Search}" Value="">
+                                <Setter Property="Visibility" Value="Visible"/>
+                            </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                        </TextBlock.Style>
+                        </TextBlock>
+                    </Grid>
+                    <Button Content="高级搜索" Click="AdvancedSearch_Click" Padding="8,5" Margin="6,0,0,0"/>
+                    <Button x:Name="ToggleSelection" Content="未全部选中" Click="ToggleSelection_Click" Padding="8,5" Margin="6,0,0,0" ToolTip="选择当前筛选结果的全部商品（含其他页）；再次点击取消全部选择"/>
+                    <Button Content="清除筛选条件" Click="ClearFilters_Click" Padding="8,5" Margin="6,0,0,0"/>
+                    <CheckBox x:Name="LowOnly" Content="仅预警" Margin="12,0" VerticalAlignment="Center" Checked="Filter_Changed" Unchecked="Filter_Changed"/>
+                </WrapPanel></DockPanel>
+                <DockPanel Margin="0,8,0,0">
+                    <TextBlock x:Name="FilterSummary" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="#176B60"/>
+                </DockPanel>
+            </StackPanel>
+            <Border Grid.Row="4" Background="White" CornerRadius="10" ClipToBounds="True"><Grid>
+                <DataGrid Sorting="Products_Sorting" SelectionChanged="Products_SelectionChanged" ColumnHeaderStyle="{StaticResource SortHeader}" SelectionMode="Extended" SelectionUnit="FullRow" x:Name="ProductsGrid" MouseDoubleClick="Grid_DoubleClick" PreviewMouseRightButtonDown="Product_RightClick">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="序号" Binding="{Binding DisplayIndex}" CanUserSort="False" Width="60"/>
+                        <DataGridTemplateColumn Header="图片 / 选择" CanUserSort="False" Width="105">
+                            <DataGridTemplateColumn.CellTemplate><DataTemplate><StackPanel Orientation="Horizontal">
+                                <CheckBox Margin="0,0,8,0" VerticalAlignment="Center" IsChecked="{Binding IsSelected, RelativeSource={RelativeSource AncestorType=DataGridRow}, Mode=TwoWay}"/>
+                                <Border Width="48" Height="48" Background="#E3E6E9" CornerRadius="5"><Image Source="{Binding Image, Converter={StaticResource ProductImage}}" Stretch="Uniform"/></Border>
+                            </StackPanel></DataTemplate></DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTextColumn Header="供应商" Binding="{Binding Supplier}" Width="120"/>
+                        <DataGridTextColumn Header="名称" Binding="{Binding Name}" Width="150"/>
+                        <DataGridTextColumn Header="编号" Binding="{Binding Code}" Width="110"/>
+                        <DataGridTextColumn Header="色号" Binding="{Binding Color}" Width="110"/>
+                        <DataGridTextColumn Header="规格" Binding="{Binding Specification}" Width="90"/>
+                        <DataGridTextColumn Header="库存（件）" SortMemberPath="Quantity" Binding="{Binding StockDisplay}" Width="150"/>
+                        <DataGridTextColumn Header="片/件" Binding="{Binding PiecesPerCase}" Width="90"/>
+                        <DataGridTextColumn Header="总片数" Binding="{Binding TotalPieces, StringFormat=0.##}" Width="85"/>
+                        <DataGridTemplateColumn Header="状态" SortMemberPath="Status" Width="110"><DataGridTemplateColumn.CellTemplate><DataTemplate><TextBlock Text="{Binding Status}"><TextBlock.Style><Style TargetType="TextBlock"><Setter Property="Foreground" Value="#176B60"/><Style.Triggers><DataTrigger Binding="{Binding Low}" Value="True"><Setter Property="Foreground" Value="#B95421"/><Setter Property="FontWeight" Value="Bold"/></DataTrigger></Style.Triggers></Style></TextBlock.Style></TextBlock></DataTemplate></DataGridTemplateColumn.CellTemplate></DataGridTemplateColumn>
+                        <DataGridTextColumn Header="预警值" Binding="{Binding Minimum}" Width="80"/>
+                        <DataGridTextColumn Header="上次入库价" Binding="{Binding LastInboundPrice, StringFormat=0.####}" Width="110"/>
+                        <DataGridTextColumn Header="上次出库价" Binding="{Binding LastOutboundPrice, StringFormat=0.####}" Width="110"/>
+                        <DataGridTextColumn Header="备注" Binding="{Binding Notes}" Width="170"/>
+                        <DataGridTextColumn Header="更新时间" Binding="{Binding Updated, StringFormat=yyyy-MM-dd HH:mm}" Width="155"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <TextBlock x:Name="EmptyText" Text="还没有商品，点击“新增商品”开始管理库存。&#10;也可以导出空模板，填写后导入。" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#83939D" FontSize="16" IsHitTestVisible="False"/>
+            </Grid></Border>
+            <StackPanel Grid.Row="5" Margin="0,12,0,0">
+                <WrapPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,12,0">
+                        <Button x:Name="PreviousPage" Content="上一页" Click="PreviousPage_Click"/>
+                        <TextBlock Text="第" VerticalAlignment="Center" Margin="6,0"/>
+                        <TextBox x:Name="ProductJumpInput" Text="1" Width="50" Height="36" TextAlignment="Center" ToolTip="输入页码后按回车"/>
+                        <TextBlock x:Name="ProductPageTotal" Text="/ 1 页" VerticalAlignment="Center" Margin="6,0,12,0"/>
+                        <TextBlock x:Name="PageText" VerticalAlignment="Center" Margin="0,0,12,0"/>
+                        <TextBlock Text="每页" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                        <TextBox x:Name="ProductPageSizeInput" Text="20" Width="50" Height="36" TextAlignment="Center" ToolTip="输入每页条数后按回车"/>
+                        <TextBlock Text="条" VerticalAlignment="Center" Margin="6,0,12,0"/>
+                        <Button x:Name="NextPage" Content="下一页" Click="NextPage_Click"/>
+                    </StackPanel>
+                    <TextBlock x:Name="SelectionText" VerticalAlignment="Center"/>
+                </WrapPanel>
+                <TextBlock x:Name="StatusText" Margin="0,8,0,0" Foreground="#75838C" FontSize="12"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
